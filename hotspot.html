@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <title>Script Setup Hotspot</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="Script Setup Hotspot mikrotik"/>
+    <meta name="keywords" content="script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="DC.title" content="Script Setup Hotspot mikrotik"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/hotspot.php"/>
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+       <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> Script Setup Hotspot </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Fill in according to Interface and Ip </p><hr>                     
+                  <form onsubmit="event.preventDefault()">
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Dhcp Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="dhcp" id="dhcp" placeholder="Ether1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Interface Hs </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="hs" id="hs" placeholder="Ether2-hs">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>Dns Name</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="dns" id="dns" placeholder="Wifi.net">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Username</label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="user" id="user" placeholder="admin">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>Password</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="pass" id="pass" placeholder="admin">
+                        </div>
+                      </div>
+                    </div>
+                   
+                   
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button>
+                    <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 395px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                        /ip hotspot profile <br>
+                        add dns-name={{dns}} hotspot-address=10.5.50.1 name=hsprof1 <br>                      
+                        /ip pool<br>
+                        add name=hs-pool-1 ranges=10.5.50.2-10.5.50.254              <br>       
+                        /ip dhcp-server<br>
+                        add address-pool=hs-pool-1 disabled=no interface={{hs}} lease-time=1h name=\<br>
+                            dhcp1                       <br>
+                        /ip hotspot<br>
+                        add address-pool=hs-pool-1 disabled=no interface={{hs}} name=hotspot1 profile=\<br>
+                            hsprof1                     <br>
+                        /ip neighbor discovery-settings<br>
+                        set discover-interface-list=!dynamic                       <br>
+                        /ip dhcp-client<br>
+                        add disabled=no interface={{dhcp}}     <br>                   
+                        /ip address<br>
+                        add address=10.5.50.1/24 comment="hotspot network" interface={{hs}} network=\<br>
+                            10.5.50.0        <br>               
+                        /ip dhcp-server network<br>
+                        add address=10.5.50.0/24 comment="hotspot network" gateway=10.5.50.1 <br>                      
+                        /ip dns<br>
+                        set allow-remote-requests=yes servers=8.8.8.8,1.1.1.1    <br>                   
+                        /ip firewall filter<br>
+                        add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" \<br>
+                            disabled=yes             <br>          
+                        /ip firewall nat<br>
+                        add action=masquerade chain=srcnat out-interface={{dhcp}}     <br>              
+                        /ip firewall nat<br>
+                        add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" \<br>
+                            disabled=yes<br>
+                        add action=masquerade chain=srcnat comment="masquerade hotspot network" \<br>
+                            src-address=10.5.50.0/24    <br>                
+                        /ip hotspot user<br>
+                        add name={{user}} password={{pass}}
+                        
+                        
+
+
+                    </span>
+                    </div>
+                    <button  class="bt" id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/hotspot.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- MULAI JQUERY -->
+   
+
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            dhcp: "",
+            hs: "",
+            dns: "",
+            user: "",
+            pass: "",
+        
+            
+        },
+        methods: {
+            kirim() {
+                this.dhcp = document.getElementById("dhcp").value;
+                this.hs = document.getElementById("hs").value;                        
+                this.dns = document.getElementById("dns").value;
+                this.user = document.getElementById("user").value;
+                this.pass = document.getElementById("pass").value;
+          
+
+            }       
+        },
+    });
+</script>
+     
+
+     
+      <script src="assets/js/clipboard.min.js"></script>
+      <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+      </script>
+      <script type="text/javascript">
+      $(window).on('load', function() {
+      $('#myModal').modal('show');
+      });
+      </script>
+      <script>
+      const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+      alert('Copy Script Sucsess');
+      });
+      </script>
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+  </body>
+</html>
+
+

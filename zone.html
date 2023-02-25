@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Script ON-OFF Ether Mikrotik Scheduler</title>
+    <meta content='Script ON-OFF Ether Mikrotik Scheduler  ' name='description'/>
+    <meta content='script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet' name='keywords'/>
+    <meta content='index, follow, noodp' name='robots'/>
+    <meta property="og:title" content="Script ON-OFF Ether Mikrotik Scheduler by ahmadydev.github.io">
+    <meta property="og:description" content="Script ON-OFF Ether Mikrotik Scheduler by ahmadydev.github.io">
+    <meta property="og:image:alt" content="Script ON-OFF Ether Mikrotik Scheduler by ahmadydev.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/hotspot.php">
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+  
+  
+  </head>
+  <body>
+    
+        <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+           
+          </form>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> Script ON-OFF Ether Mikrotik Scheduler </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Fill in according to Interface and Ip </p><hr>                     
+                  <form onsubmit="event.preventDefault()">
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et1" id="et1" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                    <code>[ Senin ]</code>
+                      <div class="col">                      
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start1" id="start1" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on1" id="on1" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et2" id="et2" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Selasa ]</code>
+                      <div class="col">
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start2" id="start2" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on2" id="on2" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et3" id="et3" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Rabu ]</code>
+                      <div class="col">                      
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start3" id="start3" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on3" id="on3" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et4" id="et4" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Kamis ]</code>
+                      <div class="col">
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start4" id="start4" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on4" id="on4" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et5" id="et5" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Jum'at ]</code>
+                      <div class="col">
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start5" id="start5" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on5" id="on5" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et6" id="et6" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Sabtu ]</code>
+                      <div class="col">
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start6" id="start6" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on6" id="on6" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div><hr>
+                    <div class="form-group row">
+                    <div class="col">
+                        <label>Interface Client</label>
+                        <div >
+                          <input class="typeahead" type="text" name="et7" id="et7" placeholder="EX: Ether-client">
+                        </div>
+                      </div>
+                    <code>[ Minggu ]</code>
+                      <div class="col">
+                        <label>Start-Time </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="start7" id="start7" placeholder="03:59:00">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>On-Time</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="on7" id="on7" placeholder="04:09:00">
+                        </div>
+                      </div>
+                    </div>
+                   
+                   
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button> <hr>
+                   <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+             
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 395px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                      /system scheduler add name=start-senin  interval="1d 00:00:00" start-time="{{start1}}" on-event="/interface disable {{et1}}" comment=1.start-senin <br>
+                      /system scheduler add name=on-senin  interval="1d 00:00:00" start-time="{{on1}}" on-event="/interface enable {{et1}}" comment=1.on-senin <br>
+
+                      /system scheduler add name=start-selasa  interval="2d 00:00:00" start-time="{{start2}}" on-event="/interface disable {{et2}}" comment=2.start-selasa <br>
+                      /system scheduler add name=on-selasa  interval="2d 00:00:00" start-time="{{on2}}" on-event="/interface enable {{et2}}" comment=2.on-selasa <br>
+                      <span v-if="senin==true">
+                      /system scheduler add name=start-rabu  interval="3d 00:00:00" start-time="{{start3}}" on-event="/interface disable {{et3}}" comment=3.start-rabu <br>
+                      /system scheduler add name=on-rabu  interval="3d 00:00:00" start-time="{{on3}}" on-event="/interface enable {{et3}}" comment=3.on-rabu <br>
+                      </span>
+                      <span v-if="selasa==true">
+                      /system scheduler add name=start-kamis  interval="4d 00:00:00" start-time="{{start4}}" on-event="/interface disable {{et4}}" comment=4.start-kamis <br>
+                      /system scheduler add name=on-kamis  interval="4d 00:00:00" start-time="{{on4}}" on-event="/interface enable {{et4}}" comment=4.on-kamis <br>
+                      </span>
+                      <span v-if="rabu==true">
+                      /system scheduler add name=start-jumat  interval="5d 00:00:00" start-time="{{start5}}" on-event="/interface disable {{et5}}" comment=5.start-jumat <br> 
+                      /system scheduler add name=on-jumat  interval="5d 00:00:00" start-time="{{on5}}" on-event="/interface enable {{et5}}" comment=5.on-jumat <br>
+                      </span>
+                      <span v-if="kamis==true">
+                      /system scheduler add name=start-sabtu  interval="6d 00:00:00" start-time="{{start6}}" on-event="/interface disable {{et6}}" comment=4.start-sabtu <br>
+                      /system scheduler add name=on-sabtu  interval="6d 00:00:00" start-time="{{on6}}" on-event="/interface enable {{et6}}" comment=4.on-sabtu <br>
+                      </span>
+                      <span v-if="jum==true">
+                      /system scheduler add name=start-minggu  interval="7d 00:00:00" start-time="{{start7}}" on-event="/interface disable {{et7}}" comment=5.start-minggu <br>
+                      /system scheduler add name=on-minggu  interval="7d 00:00:00" start-time="{{on7}}" on-event="/interface enable {{et7}}" comment=5.on-minggu <br>   
+                      </span>
+                    </span>
+                    </div>
+                    <button  class="bt" id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/zone.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- MULAI JQUERY -->
+   
+    
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+          
+            
+            et1: "",
+            et2: "",
+            et3: "",
+            et4: "",
+            et5: "",
+            et6: "",
+            et7: "",
+
+            start1: "",
+            start2: "",
+            start3: "",
+            start4: "",
+            start5: "",
+            start6: "",
+            start7: "",
+
+            on1: "",
+            on2: "",
+            on3: "",
+            on4: "",
+            on5: "",
+            on6: "",
+            on7: "",
+
+            senin: false,
+            selasa: false,
+            rabu: false,
+            kamis: false,
+            jum: false,
+
+
+
+        
+            
+        },
+        methods: {
+            kirim() {
+              
+                this.et1 = document.getElementById("et1").value;
+                this.et2 = document.getElementById("et2").value;
+                this.et3 = document.getElementById("et3").value;
+                this.et4 = document.getElementById("et4").value;
+                this.et5 = document.getElementById("et5").value;
+                this.et6 = document.getElementById("et6").value;
+                this.et7 = document.getElementById("et7").value;
+                this.start1 = document.getElementById("start1").value;
+                this.start2 = document.getElementById("start2").value;
+                this.start3 = document.getElementById("start3").value;
+                this.start4 = document.getElementById("start4").value;
+                this.start5 = document.getElementById("start5").value;
+                this.start6 = document.getElementById("start6").value;
+                this.start7 = document.getElementById("start7").value;
+                this.on1 = document.getElementById("on1").value;
+                this.on2 = document.getElementById("on2").value;
+                this.on3 = document.getElementById("on3").value;
+                this.on4 = document.getElementById("on4").value;
+                this.on5 = document.getElementById("on5").value;
+                this.on6 = document.getElementById("on6").value;
+                this.on7 = document.getElementById("on7").value;
+                
+
+                if(this.et3!=''){
+                this.senin=true;
+                }
+                if(this.et4!=''){
+                this.selasa=true;
+                }
+                if(this.et5!=''){
+                this.rabu=true;
+                }
+                if(this.et6!=''){
+                this.kamis=true;
+                }
+                if(this.et7!=''){
+                this.jum=true;
+                }
+
+            }       
+        },
+    });
+</script>
+     
+
+     
+      <script src="assets/js/clipboard.min.js"></script>
+      <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+      </script>
+      <script type="text/javascript">
+      $(window).on('load', function() {
+      $('#myModal').modal('show');
+      });
+      </script>
+      <script>
+      const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+      alert('Copy Script Sucsess');
+      });
+      </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+    
+
+  </body>
+</html>
+
+

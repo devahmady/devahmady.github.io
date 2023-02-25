@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <title>Script Routing Vpn Game  </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="Script Routing Vpn Game mikrotik"/>
+    <meta name="keywords" content="script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="DC.title" content="Script Routing Vpn Game mikrotik"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/routing-game.php">
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="wa.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+       <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> Script Routing Vpn Game [ Dany Eka Pajrian] </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Fill in according to Interface and Ip </p><hr>                     
+                  <form onsubmit="event.preventDefault()">
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Nat</label>
+                        <div >
+                          <input class="typeahead text-white" type="text" name="local" id="local" placeholder="EX: VPN Speedtest">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>IP Client </label>
+                        <div id="the-basics">
+                          <input class="typeahead text-white" type="text" name="ip" id="ip" placeholder="192.168.55.0/24">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>Gateway Vpn </label>
+                        <div id="the-basics">
+                          <input class="typeahead text-white" type="text" name="vpn" id="vpn" placeholder="25.26.5.1">
+                        </div>
+                      </div>
+                    </div>
+                  
+                   
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button>
+                    <button type="submit" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Vpn</button>
+                    <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+              
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 395px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                      /ip firewall nat; <br>
+                      add chain=srcnat out-interface="{{ local }}" action=masquerade comment="Game"; <br>
+                      /ip firewall mangle;<br>
+                      add action=mark-routing chain=prerouting dst-address-list=List-IP-Games new-routing-mark=routing-game passthrough=no comment="GAME" dst-port=!21,22,23,80,81,88,5050,843,443,182,8777,1935,8000-8081 protocol=tcp; <br>
+                      add action=mark-routing chain=prerouting dst-address-list=List-IP-Games new-routing-mark=routing-game passthrough=no dst-port=!21,22,23,80,81,88,5050,843,443,182,8777,1935,8000-8081 protocol=udp; <br>
+
+                      /ip firewall raw; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Arena Of Valor - Mobile" dst-address-list=!"IP LOCAL" dst-port=10001-10094 protocol=tcp;<br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=10080,17000 protocol=udp;<br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Clash Of Clans - Mobile" dst-address-list=!"IP LOCAL" dst-port=9330-9340 protocol=tcp;<br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Clash Royale (Cry) - Mobile" dst-address-list=!"IP LOCAL" dst-port=9330-9340 protocol=tcp;<br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=9330-9340 protocol=udp;<br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Call Of Duty - Mobile" dst-address-list=!"IP LOCAL" dst-port=3013,10000-10019,50000,65010,65050 protocol=tcp;<br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=7085-7995,8700,9030,10010-10019 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Free Fire - Mobile" dst-address-list=!"IP LOCAL" dst-port=6006,7006,8006,9006,11000-11019,39003,39006,39698,39779,10000-10007 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=6008,7008,8008,9008,10000-10009,11000-11019 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Mobile Legends - Mobile" dst-address-list=!"IP LOCAL" dst-port=5001-5180,5501-5680,9443,30000-30220,9001 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=5001-5180,5501-5680,9992,30020-30220,9001 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Point Blank - Mobile" dst-address-list=!"IP LOCAL" dst-port=44590-44610 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=39190-39200,49001-49190 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=40000-40010 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="PUBG - Mobile" dst-address-list=!"IP LOCAL" dst-port=14000,17000,17500,18081,20000-20002,10012,17500 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=7889,10012,17500,18081 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=10020-14000,17000,17500,20000-20002,7086-7995,12070-12460,41182-42474 protocol=udp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=8011,9030,10010-10650,11000-14000,17000,20000,20001,20002 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="Rules Of Survival - Mobile" dst-address-list=!"IP LOCAL" dst-port=24000-24050 protocol=udp; <br>
+
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting comment="HIGGS DOMINO" dst-address-list=!"IP LOCAL" dst-port=9120,40000-40010 protocol=udp; <br>
+                      add action=add-dst-to-address-list address-list="List-IP-Games" src-address-list="IP LOCAL" address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" dst-port=9137,26000-26050,26666 protocol=tcp; <br>
+                      add action=add-dst-to-address-list address-list=List-IP-Games address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" src-address-list="IP LOCAL" content=.neptunegame.com; <br>
+                      add action=add-dst-to-address-list address-list=List-IP-Games address-list-timeout=1d chain=prerouting dst-address-list=!"IP LOCAL" src-address-list="IP LOCAL" content=.appsflyer.com; <br>
+                      /ip route; <br>
+                      add gateway="{{ vpn }}" routing-mark=routing-game comment="GAME"; <br>
+                      /ip firewall address-list; <br>
+                      add address=192.168.0.0/16 list="IP LOCAL"; <br>
+                      add address=192.168.88.0/22 list="IP LOCAL"; <br>
+                      add address=172.16.0.0/12 list="IP LOCAL"; <br>
+                      add address=10.0.0.0/8 list="IP LOCAL"; <br>
+                      add address={{ ip }} list="IP LOCAL"; <br>
+                      add address=8.215.27.0/24 list=List-IP-Games <br>
+                      add address=8.215.35.0/24 list=List-IP-Games <br>
+                      add address=8.215.66.0/24 list=List-IP-Games <br>
+                      add address=8.215.26.0/24 list=List-IP-Games <br>
+                      add address=149.129.254.0/24 list=List-IP-Games <br>
+                      add address=149.129.213.0/24 list=List-IP-Games <br>
+                      add address=149.129.227.0/24 list=List-IP-Games <br>
+                      add address=149.129.240.0/24 list=List-IP-Games <br>
+                      add address=149.129.247.0/24 list=List-IP-Games <br>
+                      add address=149.129.236.0/24 list=List-IP-Games <br>
+                      add address=147.139.205.0/24 list=List-IP-Games <br>
+                      add address=147.139.161.0/24 list=List-IP-Games <br>
+                      add address=147.139.198.0/24 list=List-IP-Games <br>
+                      add address=147.139.195.0/24 list=List-IP-Games <br>
+                      add address=147.139.205.0/24 list=List-IP-Games <br>
+                      add address=147.139.198.0/24 list=List-IP-Games <br>
+                      add address=147.139.132.0/24 list=List-IP-Games <br>
+                      add address=147.139.164.0/24 list=List-IP-Games <br>
+                      add address=147.139.204.0/24 list=List-IP-Games <br>
+                      add address=147.139.163.0/24 list=List-IP-Games <br>
+                      add address=147.139.202.0/24 list=List-IP-Games <br>
+                      add address=147.139.192.0/24 list=List-IP-Games <br>
+                      add address=147.139.194.0/24 list=List-IP-Games <br>
+                      add address=147.139.200.0/24 list=List-IP-Games <br>
+
+                        
+
+
+                    </span>
+                    </div>
+                    <button  class="bt" id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/routing-game.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">List produk vpn</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="background-color:white;">
+                    <form class="whatsapp-form ">
+                    <div class="datainput">
+                    <input class="validate " id="wa_name" name="name" required="" type="text" value=''/>
+                    <span class="highlight"></span><span class="bar"></span>
+                    <label>Nama</label>
+                    </div>
+
+                    <div class="datainput">
+                    <select id="wa_select">
+                      <option hidden='hidden' selected='selected' value='default' required="">VPN</option>
+                      <option value="1">Mikhmon Online dan Remote Mikrotik</option>
+                      <option value="2">Remote Router Client Unlimited</option>
+                      <option value="3">Vpn Game dan Speedtest</option>
+                    </select>
+                    </div>
+
+                    <div class="datainput">
+                    <textarea id='wa_textarea' placeholder='' maxlength='5000' row='1' required=""></textarea>
+                    <span class="highlight"></span><span class="bar"></span>
+                    <label>Pesan</label>
+                    </div>
+                    <button class="send_form btn-success" href="javascript:void" type="submit" title="Send to Whatsapp">Kirim ke Whatsapp</button>
+                    <div id="text-info"></div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script  src="assets/js/script.js"></script>
+
+    <!-- MULAI JQUERY -->
+   
+
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            local: "",
+            ip: "",
+            vpn: "",
+         
+            
+        },
+        methods: {
+            kirim() {
+                this.local = document.getElementById("local").value;
+                this.ip = document.getElementById("ip").value;                        
+                this.vpn = document.getElementById("vpn").value;                        
+             
+
+            }       
+        },
+    });
+</script>
+     
+
+     
+      <script src="assets/js/clipboard.min.js"></script>
+      <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+      </script>
+      <script type="text/javascript">
+      $(window).on('load', function() {
+      $('#myModal').modal('show');
+      });
+      </script>
+      <script>
+      const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+      alert('Copy Script Sucsess');
+      });
+      </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+
+  </body>
+</html>
+
+

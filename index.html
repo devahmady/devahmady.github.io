@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.balehotspot.id/",
+      "potentialAction": [{
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://query.balehotspot.id/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },{
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "android-app://com.balehotspot/https/query.balehotspot.id/search/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }]
+    }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="keywords" content="ahmadydev,script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="roboots" content="index,follow"/>
+    <meta name="DC.title" content="Script Mikrotik Online"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://balehotspot.id/mikrotik"/>
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "4fc4be0d-e7f7-4cf0-bed8-e7b59beb6e98",
+        });
+      });
+    </script>
+    
+  
+  </head>
+  <style>
+
+.rate {
+    margin: auto;
+  width: 35%;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+</style>
+  <body>
+  <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header ">  
+       [ Welcome To Balehotspot Script ]
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+    </center>    
+</div>
+    <div class="content"><?html echo $postData['content']; ?></div>        
+        </div>   
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>    
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-menu-button-wide-fill"></i> CHOOSE THE MICROTIC SCRIPT YOU NEED</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fwww.facebook.com%2Fbalehotspot.id&width=90&layout=button_count&action=like&size=small&share=false&height=21&appId" width="90" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-12 ">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Bordered table</h4>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>          
+                          <th> Script Mikrotik </th>
+                          <th> Fans </th>                   
+                          <th> Link Script </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <td> LOAD BALANCING PCC MIKROTIK </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Fpcc-3-line.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="pcc-3-line.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                         <tr>
+                          <td> Telegram Monitoring Hotspot</td>
+                          <td>
+                            <div >
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Ftelegram-monitoring.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="telegram-monitoring.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                         <tr>
+                          <td> Telegram Monitoring Pppoe</td>
+                          <td>
+                            <div >
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Ftelegram-pppoe.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="telegram-pppoe.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> Block Situs </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Fblock-situs.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="block-situs.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                         <tr>
+                          <td> Game Traffic, Browsing, Youtube and Isp . Game Routing </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Ftrafik.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="trafik.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                         <tr>
+                          <td>Script Setup Hotspot </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Fhotspot.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="hotspot.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Script Routing Game Online </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Frouting-game.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="routing-game.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Script ON-OFF Ether Mikrotik Scheduler </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Fzone.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="zone.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> Port And Address List Mikrotik </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fahmadydev%2Flist.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="list.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                          <tr>
+                          <td> Script Routing Vpn Game </td>
+                          <td>
+                            <div>
+                              <center>
+                                  <iframe src="https://www.facebook.com/plugins/like.html?href=https%3A%2F%2Fbalehotspot.id%2Fmikrotik%2Fvpn-game.html&layout=button_count&size=small&appId=1780665628989695&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                              </center>
+                            </div>
+                          </td>
+                          <td>
+                            <center>
+                              <a href="vpn-game.html">
+                              <button type="button" class="btn btn-outline-info "> Open</button> 
+                              </a> 
+                            </center>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+  
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   
+  
+    
+     <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      
+ </script>
+ 
+<script> 
+    window.intergramId = "5581516794";
+    window.intergramCustomizations = {
+        titleClosed: 'Live Chat',
+        titleOpen: 'Admin [ Online ]',
+        mainColor: "rgb(255,87,34)", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+        alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
+    };
+</script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+  </body>
+</html>
+
+

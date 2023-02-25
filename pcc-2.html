@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <title>Load Balancing PCC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="script loadbalance mikrotik"/>
+    <meta name="keywords" content="script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="DC.title" content="script loadbalance mikrotik"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/pcc-2.php">
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+     <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> LOAD BALANCING PCC FULL SCRIPT MIKROTIK ( 100 + 50 ) </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Fill in according to Interface and Ip </p><hr>                     
+                      <p class="card-description mb-2">If you need an <code>IP address and address list, </code> please check the available menus</p>             
+                        <div class="row">
+                         
+                          <div class="col-6">
+                              <div class="form-check form-check-primary">
+                                <input class="form-check-input" type="checkbox" value="" id="addrlist">
+                                <samp for="addrlist" >Ip firewall address-list</samp>
+                              </div>                                                   
+                          </div>
+                          <div class="col-6">                           
+                            <div class="form-check form-check-primary">
+                              <input class="form-check-input" type="checkbox" id="mangle">
+                              <samp for="mangel">Ip mangle</samp>
+                            </div>                                               
+                        </div>
+                        </div><hr>  
+                  <form onsubmit="event.preventDefault()">
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>WAN 1 </label>
+                        <div >
+                          <input class="typeahead" type="text" name="interface1" id="interface1" placeholder="Ether1">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>Gateway Wan 1</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="ip1" id="ip1" placeholder="192.168.1.1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>WAN 2 </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="interface2" id="interface2" placeholder="Ether2">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label>Gateway Wan 2</label>
+                        <div id="bloodhound">
+                          <input class="typeahead" type="text" name="ip2" id="ip2" placeholder="192.168.2.1">
+                        </div>
+                      </div>
+                    </div>
+                   
+                   
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button>
+                    <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 395px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                        <div id="addrlistScript"></div>
+                        <div id="mangleScript"></div>
+                        /ip firewall nat <br>
+                        add chain=srcnat out-interface="{{interface1}}" action=masquerade  <br>
+                        add chain=srcnat out-interface="{{interface2}}" action=masquerade  <br>
+                        /ip route <br>
+                        add check-gateway=ping distance=1 gateway="{{ip1}}" routing-mark="to-{{interface1}}"  <br>
+                        add check-gateway=ping distance=1 gateway="{{ip2}}" routing-mark="to-{{interface2}}"  <br>
+                        add check-gateway=ping distance=1 gateway="{{ip1}}"  <br>
+                        add check-gateway=ping distance=2 gateway="{{ip2}}"  <br>
+                        /ip firewall mangle <br>
+                        add action=mark-connection chain=input in-interface="{{interface1}}" new-connection-mark="cm-{{interface1}}" passthrough=yes  <br>
+                        add action=mark-connection chain=input in-interface="{{interface2}}" new-connection-mark="cm-{{interface2}}" passthrough=yes  <br>
+                        add action=mark-routing chain=output connection-mark="cm-{{interface1}}" new-routing-mark="to-{{interface1}}" passthrough=yes  <br>
+                        add action=mark-routing chain=output connection-mark="cm-{{interface2}}" new-routing-mark="to-{{interface2}}" passthrough=yes  <br>
+                        add action=mark-connection chain=prerouting dst-address-list=!LOCAL-IP dst-address-type=!local new-connection-mark="cm-{{interface1}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:3/0 src-address-list=LOCAL-IP  <br>
+                        add action=mark-connection chain=prerouting dst-address-list=!LOCAL-IP dst-address-type=!local new-connection-mark="cm-{{interface1}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:3/1 src-address-list=LOCAL-IP  <br>
+                        add action=mark-connection chain=prerouting dst-address-list=!LOCAL-IP dst-address-type=!local new-connection-mark="cm-{{interface2}}" passthrough=yes per-connection-classifier=both-addresses-and-ports:3/2 src-address-list=LOCAL-IP  <br>
+                        add action=mark-routing chain=prerouting connection-mark="cm-{{interface1}}" dst-address-list=!LOCAL-IP new-routing-mark="to-{{interface1}}" passthrough=yes src-address-list=LOCAL-IP  <br> 
+                        add action=mark-routing chain=prerouting connection-mark="cm-{{interface2}}" dst-address-list=!LOCAL-IP new-routing-mark="to-{{interface2}}" passthrough=yes src-address-list=LOCAL-IP  <br>
+
+
+                    </span>
+                    </div>
+                    <button  class="bt"  id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/pcc-2.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Source Script <a href="https://buananetpbun.github.io" target="_blank">buananetpbun.github.io</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- MULAI JQUERY -->
+    <script>
+      var addrlist ='/ip firewall address-list <br>'+
+                    'add list=IP-LOCAL address=0.0.0.0/8 <br>'+ 
+                    'add list=IP-LOCAL address=10.0.0.0/8 <br>'+
+                    'add list=IP-LOCAL address=100.64.0.0/10 <br>'+
+                    'add list=IP-LOCAL address=127.0.0.0/8 <br>'+
+                    'add list=IP-LOCAL address=169.254.0.0/16 <br>'+
+                    'add list=IP-LOCAL address=172.16.0.0/12 <br>'+
+                    'add list=IP-LOCAL address=192.0.0.0/24 <br>'+
+                    'add list=IP-LOCAL address=192.0.2.0/24 <br>'+
+                    'add list=IP-LOCAL address=192.168.0.0/16 <br>'+
+                    'add list=IP-LOCAL address=198.18.0.0/15 <br>'+
+                    'add list=IP-LOCAL address=198.51.100.0/24 <br>'+
+                    'add list=IP-LOCAL address=203.0.113.0/24 <br>'+
+                    'add list=IP-LOCAL address=224.0.0.0/4 <br>'+
+                    'add list=IP-LOCAL address=240.0.0.0/4 <br>'; 
+       var mangle ='/ip firewall mangle <br>' +
+                  'add action=accept chain=prerouting dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>' +
+                  'add action=accept chain=postrouting dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>'+
+                  'add action=accept chain=forward dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>'+
+                  'add action=accept chain=input dst-address-list=IP-LOCAL src-address-list=IP-LOCAL <br>'+
+                  'add action=accept chain=output dst-address-list=IP-LOCAL src-address-list=IP-LOCAL';         
+      $(document).ready(function(){
+          $('input[type="checkbox"]').click(function(){
+              //JIKA PUBG DICENTANG
+              if($("#addrlist").prop("checked") == true){
+                  // document.getElementById('addrlistScript').style.visibility = 'visible';
+                  document.getElementById('addrlistScript').innerHTML = addrlist;
+              }
+              else if($("#addrlist").prop("checked") == false){
+                  document.getElementById('addrlistScript').innerHTML = '';
+              }
+
+              // JIKA COC DICENTANG
+              if($("#mangle").prop("checked") == true){
+                document.getElementById('mangleScript').innerHTML = mangle;
+              }
+              else if($("#mangle").prop("checked") == false){
+                document.getElementById('mangleScript').innerHTML = '';
+              }
+
+              // LANJUTKAN SENDIRI
+          });
+      });
+    </script>
+
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            ip1: "",
+            interface1: "",
+            ip2: "",
+            interface2: "",
+           
+            
+        },
+        methods: {
+            kirim() {
+                this.ip1 = document.getElementById("ip1").value;
+                this.interface1 = document.getElementById("interface1").value;                        
+                this.ip2 = document.getElementById("ip2").value;
+                this.interface2 = document.getElementById("interface2").value;
+
+            }       
+        },
+    });
+</script>
+     <!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            instagram: "bhscriptgenerator", // Instagram username
+            whatsapp: "081236391494", // WhatsApp number
+            call_to_action: "bantuan", // Call to action
+            button_color: "#666666", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "instagram,whatsapp", // Order of buttons
+            pre_filled_message: "jasa setting mikrotik", // WhatsApp pre-filled message
+        };
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->
+
+    <script src="assets/js/clipboard.min.js"></script>
+     <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
+    <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+    </script>
+    <script>
+      const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+        alert('Copy Script Sucsess');
+      });
+    </script>
+    
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+      
+
+  </body>
+</html>
+
+

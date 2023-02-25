@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <title>Block situs </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="Script Block Situs mikrotik"/>
+    <meta name="keywords" content="script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="DC.title" content="Script Block situs mikrotik"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/pcc-2-line.php">
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    
+  
+  </head>
+  <body>
+         <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> Block site on mikrotik </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> </li>
+                  <li class="breadcrumb-item active" aria-current="page"><a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a></li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Choose as needed </p><hr>                     
+                      <p class="card-description mb-2">Check the <code>Sites you want to block, </code> </p>             
+                        <div class="row">
+                          <div class="col-6">
+                              <div class="form-check form-check-primary">
+                                <input class="form-check-input" type="checkbox" value="" id="yandex">
+                                <samp for="yandex" >Yandex.com</samp>
+                              </div>                                                   
+                          </div>
+                          <div class="col-6">                           
+                            <div class="form-check form-check-primary">
+                              <input class="form-check-input" type="checkbox" id="situs1">
+                              <samp for="situs1">Proxysite</samp>
+                            </div>                                               
+                        </div>
+                        <div class="col-6">
+                          <div class="form-check form-check-primary">
+                            <input class="form-check-input" type="checkbox" value="" id="situs2">
+                            <samp for="situs2" >Croxyproxy.com</samp>
+                          </div>                                                   
+                            </div>
+                            <div class="col-6">                           
+                              <div class="form-check form-check-primary">
+                                <input class="form-check-input" type="checkbox" id="situs3">
+                                <samp for="situs3">Xhamster.com</samp>
+                              </div>                                               
+                          </div>
+                          <div class="col-6">
+                            <div class="form-check form-check-primary">
+                              <input class="form-check-input" type="checkbox" value="" id="situs4">
+                              <samp for="situs4" >Xnxx.health</samp>
+                            </div>                                                   
+                        </div>
+                        <div class="col-6">                           
+                          <div class="form-check form-check-primary">
+                            <input class="form-check-input" type="checkbox" id="situs5">
+                            <samp for="situs5">682xnxx.com</samp>
+                          </div>                                               
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check form-check-primary">
+                          <input class="form-check-input" type="checkbox" value="" id="situs6">
+                          <samp for="situs6" >193xnxx.com</samp>
+                        </div>                                                   
+                    </div>
+                    <div class="col-6">                           
+                      <div class="form-check form-check-primary">
+                        <input class="form-check-input" type="checkbox" id="situs7">
+                        <samp for="situs7">979xnxx.com</samp>
+                      </div>                                               
+                  </div>
+                  <div class="col-6">
+                    <div class="form-check form-check-primary">
+                      <input class="form-check-input" type="checkbox" value="" id="situs8">
+                      <samp for="situs8" >id.xhday1.com</samp>
+                    </div>                                                   
+                </div>
+                <div class="col-6">                           
+                  <div class="form-check form-check-primary">
+                    <input class="form-check-input" type="checkbox" id="situs9">
+                    <samp for="situs9">xhamster19.com</samp>
+                  </div>                                               
+              </div>
+              <div class="col-6">
+                <div class="form-check form-check-primary">
+                  <input class="form-check-input" type="checkbox" value="" id="situs10">
+                  <samp for="situs10" >xhamster3.com</samp>
+                </div>                                                   
+            </div>
+            <div class="col-6">                           
+              <div class="form-check form-check-primary">
+                <input class="form-check-input" type="checkbox" id="situs11">
+                <samp for="situs11">xhamster1.com</samp>
+              </div>                                               
+          </div>
+          <div class="col-6">
+            <div class="form-check form-check-primary">
+              <input class="form-check-input" type="checkbox" value="" id="situs12">
+              <samp for="situs12" >atom.io</samp>
+            </div>                                                   
+        </div>
+        <div class="col-6">                           
+          <div class="form-check form-check-primary">
+            <input class="form-check-input" type="checkbox" id="situs13">
+            <samp for="situs13">tuankaya.org</samp>
+          </div>                                               
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-primary">
+          <input class="form-check-input" type="checkbox" value="" id="situs14">
+          <samp for="situs14" >situs.judionline.id</samp>
+        </div>                                                   
+      </div>
+      <div class="col-6">                           
+      <div class="form-check form-check-primary">
+        <input class="form-check-input" type="checkbox" id="situs15">
+        <samp for="situs15">javhd.today</samp>
+      </div>                                               
+      </div>
+      <div class="col-6">
+        <div class="form-check form-check-primary">
+          <input class="form-check-input" type="checkbox" value="" id="situs16">
+          <samp for="situs16" >xnxx.com</samp>
+        </div>                                                   
+      </div>
+
+                        </div>
+                  <form onsubmit="event.preventDefault()">           
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button>
+                     <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 595px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                        /ip firewall nat add action=redirect chain=dstnat comment="Block Use Proxy" dst-port=80 protocol=tcp to-ports=8081 <br>
+                        /ip proxy set enabled=yes port=8081 <br>
+                        <div id="yandexScript"></div>
+                        <div id="situs1Script"></div>
+                        <div id="situs2Script"></div>
+                        <div id="situs3Script"></div>
+                        <div id="situs4Script"></div>
+                        <div id="situs5Script"></div>
+                        <div id="situs6Script"></div>
+                        <div id="situs7Script"></div>
+                        <div id="situs8Script"></div>
+                        <div id="situs9Script"></div>
+                        <div id="situs10Script"></div>
+                        <div id="situs11Script"></div>
+                        <div id="situs12Script"></div>
+                        <div id="situs13Script"></div>
+                        <div id="situs14Script"></div>
+                        <div id="situs15Script"></div>
+                        <div id="situs16Script"></div>
+                        
+                   </span>
+                    </div>
+                    <button  class="bt" id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/block-situs.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Source Script <a href="https://buananetpbun.github.io" target="_blank">buananetpbun.github.io</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- MULAI JQUERY -->
+    <script>
+      var yandex ='/ip proxy access add action=deny dst-host="*yandex.com*" comment="Blocked yandex.com" <br>';                
+      var situs1 ='/ip proxy access add action=deny dst-host="*proxysite.com*" comment="Blocked proxysite.com" <br>' ;
+      var situs2 = '/ip proxy access add action=deny dst-host="*croxyproxy.com*" comment="Blocked croxyproxy.com" <br>';
+      var situs3 = '/ip proxy access add action=deny dst-host="*xhamster.com*" comment="Blocked xhamster.com" <br>';
+      var situs4 = '/ip proxy access add action=deny dst-host="*xnxx.health*" comment="Blocked xnxx.health" <br>';
+      var situs5 = '/ip proxy access add action=deny dst-host="*682xnxx.com*" comment="Blocked 682xnxx.com" <br>';
+      var situs6 = '/ip proxy access add action=deny dst-host="*193xnxx.com*" comment="Blocked 193xnxx.com" <br>';
+      var situs7 = '/ip proxy access add action=deny dst-host="*979xnxx.com*" comment="Blocked 979xnxx.com" <br>';
+      var situs8 = '/ip proxy access add action=deny dst-host="*id.xhday1.com*" comment="Blocked id.xhday1.com" <br>';
+      var situs9 = '/ip proxy access add action=deny dst-host="*xhamster19.com*" comment="Blocked xhamster19.com" <br>';
+      var situs10 = '/ip proxy access add action=deny dst-host="*xhamster3.com*" comment="Blocked xhamster3.com" <br>';
+      var situs11 = '/ip proxy access add action=deny dst-host="*xhamster1.com*" comment="Blocked xhamster1.com" <br>';
+      var situs12 = '/ip proxy access add action=deny dst-host="*atom.io*" comment="Blocked atom.io" <br>';
+      var situs13 = '/ip proxy access add action=deny dst-host="*tuankaya.org*" comment="Blocked tuankaya.org" <br>' ;
+      var situs14 = '/ip proxy access add action=deny dst-host="*situs.judionline.id*" comment="Blocked situs.judionline.id" <br>';
+      var situs15 = '/ip proxy access add action=deny dst-host="*javhd.today*" comment="Blocked javhd.today" <br>';
+      var situs16 = '/ip proxy access add action=deny dst-host="*xnxx.com*" comment="Blocked xnxx.com" <br>';
+                   
+      $(document).ready(function(){
+          $('input[type="checkbox"]').click(function(){
+              //JIKA PUBG DICENTANG
+              if($("#yandex").prop("checked") == true){
+                  // document.getElementById('yandexScript').style.visibility = 'visible';
+                  document.getElementById('yandexScript').innerHTML = yandex;
+              }
+              else if($("#yandex").prop("checked") == false){
+                  document.getElementById('yandexScript').innerHTML = '';
+              }
+
+              // JIKA COC DICENTANG
+              if($("#situs1").prop("checked") == true){
+                document.getElementById('situs1Script').innerHTML = situs1;
+              }
+              else if($("#situs1").prop("checked") == false){
+                document.getElementById('situs1Script').innerHTML = '';
+              }
+
+              if($("#situs2").prop("checked") == true){
+                document.getElementById('situs2Script').innerHTML = situs2;
+              }
+              else if($("#situs2").prop("checked") == false){
+                document.getElementById('situs2Script').innerHTML = '';
+              }
+
+              if($("#situs3").prop("checked") == true){
+                document.getElementById('situs3Script').innerHTML = situs3;
+              }
+              else if($("#situs3").prop("checked") == false){
+                document.getElementById('situs3Script').innerHTML = '';
+              }
+
+              if($("#situs4").prop("checked") == true){
+                document.getElementById('situs4Script').innerHTML = situs4;
+              }
+              else if($("#situs4").prop("checked") == false){
+                document.getElementById('situs4Script').innerHTML = '';
+              }
+             
+              if($("#situs5").prop("checked") == true){
+                document.getElementById('situs5Script').innerHTML = situs5;
+              }
+              else if($("#situs5").prop("checked") == false){
+                document.getElementById('situs5Script').innerHTML = '';
+              }
+
+              if($("#situs6").prop("checked") == true){
+                document.getElementById('situs6Script').innerHTML = situs6;
+              }
+              else if($("#situs6").prop("checked") == false){
+                document.getElementById('situs6Script').innerHTML = '';
+              }
+
+              if($("#situs7").prop("checked") == true){
+                document.getElementById('situs7Script').innerHTML = situs7;
+              }
+              else if($("#situs7").prop("checked") == false){
+                document.getElementById('situs7Script').innerHTML = '';
+              }
+
+              if($("#situs8").prop("checked") == true){
+                document.getElementById('situs8Script').innerHTML = situs8;
+              }
+              else if($("#situs8").prop("checked") == false){
+                document.getElementById('situs8Script').innerHTML = '';
+              }
+
+              if($("#situs9").prop("checked") == true){
+                document.getElementById('situs9Script').innerHTML = situs9;
+              }
+              else if($("#situs9").prop("checked") == false){
+                document.getElementById('situs9Script').innerHTML = '';
+              }
+
+              if($("#situs10").prop("checked") == true){
+                document.getElementById('situs10Script').innerHTML = situs10;
+              }
+              else if($("#situs10").prop("checked") == false){
+                document.getElementById('situs10Script').innerHTML = '';
+              }
+
+              if($("#situs11").prop("checked") == true){
+                document.getElementById('situs11Script').innerHTML = situs11;
+              }
+              else if($("#situs11").prop("checked") == false){
+                document.getElementById('situs11Script').innerHTML = '';
+              }
+
+              if($("#situs12").prop("checked") == true){
+                document.getElementById('situs12Script').innerHTML = situs12;
+              }
+              else if($("#situs12").prop("checked") == false){
+                document.getElementById('situs12Script').innerHTML = '';
+              }
+
+              if($("#situs13").prop("checked") == true){
+                document.getElementById('situs13Script').innerHTML = situs13;
+              }
+              else if($("#situs13").prop("checked") == false){
+                document.getElementById('situs13Script').innerHTML = '';
+              }
+
+              
+              if($("#situs14").prop("checked") == true){
+                document.getElementById('situs14Script').innerHTML = situs14;
+              }
+              else if($("#situs14").prop("checked") == false){
+                document.getElementById('situs14Script').innerHTML = '';
+              }
+
+              if($("#situs15").prop("checked") == true){
+                document.getElementById('situs15Script').innerHTML = situs15;
+              }
+              else if($("#situs15").prop("checked") == false){
+                document.getElementById('situs15Script').innerHTML = '';
+              }
+
+              if($("#situs16").prop("checked") == true){
+                document.getElementById('situs16Script').innerHTML = situs16;
+              }
+              else if($("#situs16").prop("checked") == false){
+                document.getElementById('situs16Script').innerHTML = '';
+              }
+
+              // LANJUTKAN SENDIRI
+          });
+      });
+    </script>
+
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            ip1: "",
+            interface1: "",
+            ip2: "",
+            interface2: "",
+           
+            
+        },
+        methods: {
+            kirim() {
+                this.ip1 = document.getElementById("ip1").value;
+                this.interface1 = document.getElementById("interface1").value;                        
+                this.ip2 = document.getElementById("ip2").value;
+                this.interface2 = document.getElementById("interface2").value;
+
+            }       
+        },
+    });
+</script>
+     
+    <script src="assets/js/clipboard.min.js"></script>
+     <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
+     <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+    </script>
+    <script>
+        const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+        alert('Copy Script Sucsess');
+      });
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+      
+
+  </body>
+</html>
+
+

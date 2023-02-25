@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+    <title>Script Routing Game </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8/>
+    <meta name="copyright" content="Script Mikrotik Online by balehotspot.id"/>
+    <meta name="description" content="script routing game mikrotik"/>
+    <meta name="keywords" content="script generator, mikrotik, LB, PCC, load balancing, router, winbox, termimal, rsc, script, hotspot, wireless, rtrwnet"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="DC.title" content="script routing game mikrotik"/>
+    <meta http-equiv="Content-Language" content="id-ID">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmadydev.com/routing-game.php">
+    <link rel="stylesheet" href="assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+  
+  </head>
+  <body>
+       <div class="modal" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title text-center">Want to give me a Gift?</h5>
+        </div>
+        <div class="modal-body">
+        <div class="modal-body">
+        <p> [+] Buymeacoffee <a href="https://www.buymeacoffee.com/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+        <p> [+] Saweria <a href="https://saweria.co/balehotspot" role="button" class="btn btn-sm btn-success">Send</a></p>
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid " >       
+      <div class="container " >     
+        <div class="main-panel ">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Script</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.facebook.com/balehotspot.id" ><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link "  href="https://www.instagram.com/bhscriptgenerator" ><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="https://www.youtube.com/channel/UCIVjR1oRfmLefycYazCHMzw"  ><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Thank you for visiting our website !!</a>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><i class="bi bi-bookmark-plus"></i> Script Routing Game  </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fbalehotspot.id&count_bg=%23000000&title_bg=%23FF0000&icon=at-and-t.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row"  id="app">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-app-indicator"></i> From Input</h4>
+                    <p class="card-description"> Fill in according to Interface and Ip </p><hr>                     
+                  <form onsubmit="event.preventDefault()">
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>IP Local</label>
+                        <div >
+                          <input class="typeahead" type="text" name="local" id="local" placeholder="192.168.55.1/24">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Gateway Wan </label>
+                        <div id="the-basics">
+                          <input class="typeahead" type="text" name="wan" id="wan" placeholder="192.168.1.1">
+                        </div>
+                      </div>
+                    </div>
+                  
+                   
+                  <hr>
+                    <button type="submit" onclick="vm.kirim()" class="btn btn-primary me-2">Generate</button>
+                    <p class="page-title " style="color: red;" >please leave a comment if an error occurs in the script</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card copy-text" >
+                <div class="card" >
+                  <div class="card-body">
+                    <h4 class="card-title"><i class="bi bi-code-slash"></i> Output Script</h4>
+                    <p class="card-description"> Paste the script into the mikrotik terminal </p><hr>
+                      <span  class="card h-100 p-2" style="max-height: 395px;  overflow-y: auto;  white-space: nowrap; overflow-y: auto;"  >
+                      /ip firewall mangle <br>
+                      add action=mark-connection chain=prerouting comment="MOBILE LEGEND" dst-port=\<br>
+                          30097-30147,30000-30150,5001,9001,30101-30106,5057,5228,5001-5009 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          5601-5602,5025,5605,5005,5101-5109,5001-5009,30101 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          5520-5529,5551,5651,5153,5523 new-connection-mark="PORT GAME" \<br>
+                          passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          5520-5529,5020-5024,5501-5509,5517,5510 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting comment="FREE FIRE" dst-port=\<br>
+                          7006,39003,39698,39779,6006,7889,8001,10012 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          10001-10007,10012,6006,6008,7008,2000,20001,10100 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          10001-10007,10012,6006,6008,7008,2000,20001,10100 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting dst-port=\<br>
+                          7006,39003,39698,39779,6006,7889,8001,10012 new-connection-mark=\<br>
+                          "PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting comment="PORT RINGAN CAMPUR" \<br>
+                          dst-port=10289,10451,19305 new-connection-mark="PORT GAME" \<br>
+                          passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting comment=PUBG dst-port=10012,17500 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting dst-port="10147,10491,10010,10013,\<br>
+                          10612,20002,20001,20000,12235,13748,13972,13894,11455,10096,10039" \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting dst-port=1700,10071 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting comment=COC dst-port=9339 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting comment=COD dst-port=7500-7644 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=udp<br>
+                      add action=mark-connection chain=prerouting comment=SEAL dst-port=2928,1818 \<br>
+                          new-connection-mark="PORT GAME" passthrough=yes protocol=tcp<br>
+                      add action=mark-connection chain=prerouting comment="8 POOL" dst-port=\<br>
+                          4000,9001 new-connection-mark="PORT GAME" passthrough=yes \<br>
+                          protocol=tcp<br>
+                      add action=mark-routing chain=prerouting comment="ROUTING GAME" \<br>
+                          connection-mark="PORT GAME" new-routing-mark=\<br>
+                          "Routing_Game_Online" passthrough=yes src-address={{local}}<br>
+                      /ip route<br>
+                      add check-gateway=ping distance=1 gateway={{wan}} routing-mark=\<br>
+                          "Routing_Game_Online"<br>
+                      /
+
+                        
+
+
+                    </span>
+                    </div>
+                    <button  class="bt" id="notif" data-clipboard-action="copy" data-clipboard-target="span" ><i class="fas fa-clone"></i> Copy Script</button>   
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0&appId=1780665628989695&autoLogAppEvents=1" nonce="KkRdZSrw"></script>
+        <div class="fb-comments" data-href="https://ahmadydev.com/routing-game.php" data-width="950" data-numposts="1"></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer class="footer mt-1">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © ahmadydev.github.io 2021</span>
+              <span class="float-none float-sm-right text-danger d-block mt-1 mt-sm-0 text-center"> Free article about mikrotik <a href="https://www.balehotspot.id" target="_blank">Balehotspot.id</a></span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+     <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- MULAI JQUERY -->
+   
+
+   <!-- INPUT FORM  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            local: "",
+            wan: "",
+         
+            
+        },
+        methods: {
+            kirim() {
+                this.local = document.getElementById("local").value;
+                this.wan = document.getElementById("wan").value;                        
+             
+
+            }       
+        },
+    });
+</script>
+     
+
+     
+      <script src="assets/js/clipboard.min.js"></script>
+      <script>
+      var clipboard = new ClipboardJS('.bt');
+
+      clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      });
+      </script>
+      <script type="text/javascript">
+      $(window).on('load', function() {
+      $('#myModal').modal('show');
+      });
+      </script>
+      <script>
+      const button = document.querySelector('#notif');
+      button.addEventListener('click', function() {
+      alert('Copy Script Sucsess');
+      });
+      </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989996122697812"
+     crossorigin="anonymous"></script>
+<!-- produk -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1989996122697812"
+     data-ad-slot="4982459599"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-1989996122697812">
+</amp-auto-ads>
+
+  </body>
+</html>
+
+
