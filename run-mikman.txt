@@ -1,21 +1,20 @@
-#bin/bash
-pkg install git php  -y
+#!/bin/bash
 
+# Instalasi paket
+pkg install git php -y
 
+# Instalasi Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
-
 # Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 
-
-
-# Create start-mikman script
+# Buat script start-mikman
 cat >start-mikman <<EOL
-#bin/bash
+#!/bin/bash
 if pgrep "php" >/dev/null 2>&1 ; then
   killall php
 fi
@@ -23,9 +22,9 @@ cd mikmanv1
 php artisan serve
 EOL
 
-# Create update-mikmanv1 script
-cat >mikmanv1 <<EOL
-#bin/bash
+# Buat script update-mikmanv1
+cat >update-mikmanv1 <<EOL
+#!/bin/bash
 mkdir ~/mikmanv1
 cd ~/mikmanv1
 composer install
@@ -35,10 +34,9 @@ php artisan key:generate
 ./run-mikman
 EOL
 
-
-# Give execute permissions
+# Beri izin eksekusi pada script
 curl -O https://devahmady.github.io/run-mikman.txt
 chmod +x run-mikman
 
-# Run start-mikman script
-./run-mikman
+# Jalankan script start-mikman
+./start-mikman
