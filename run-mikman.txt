@@ -19,20 +19,19 @@ php artisan serve
 EOL
 
 # Create update-mikmanv1 script
-cat >update-mikmanv1 <<EOL
-#bin/bash
-mkdir ~/backup-mikmanv1
-cp -r ~/mikmanv1/. ~/backup-mikmanv1/
-rm -rf ~/mikmanv1
-git clone https://github.com/devahmady/mikmanv1.git
-cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
+# Buat script update-mikmanv1
+cat >update-mikmanv1 <<'EOL'
+#!/bin/bash
+
 cd ~/mikmanv1
 composer install
 php artisan optimize
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
+chmod +x run-mikman
 ./run-mikman
 EOL
+
 
 # Create remove-mikmanv1 script
 
