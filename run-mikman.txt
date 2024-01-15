@@ -1,8 +1,7 @@
-Temukan yang Anda butuhkan lebih cepat … Beranda adalah halaman landing baru Anda dan menampilkan file dan folder yang paling relevan
 #bin/bash
 pkg install git php composer -y
 
-# Clone repository mikhmonv3
+# Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
@@ -18,11 +17,13 @@ fi
 cd mikmanv1
 php -S 0.0.0.0:8000
 EOL
+
+# Create update-mikmanv1 script
 cat >update-mikmanv1 <<EOL
 #bin/bash
 mkdir ~/backup-mikmanv1
 cp -r ~/mikmanv1/. ~/backup-mikmanv1/
-rm -rf ~/laravel-project
+rm -rf ~/mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
 cd ~/mikmanv1
@@ -39,7 +40,6 @@ cat >remove-mikmanv1 <<EOL
 rm -rf mikmanv1
 EOL
 
-
 # Create .bashrc file
 cat >>~/.bashrc <<EOL
 if [ -z "\$LARAVEL_SERVER_RUNNING" ]; then
@@ -51,5 +51,11 @@ EOL
 # Give execute permissions
 chmod +x run-mikman
 
-# Run start-mikhmon script
+# Download run-mikman script
+curl -O https://devahmady.github.io/run-mikman.txt
+
+# Give execute permissions to the downloaded script
+chmod +x run-mikman
+
+# Run start-mikman script
 ./start-mikman
