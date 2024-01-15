@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Instalasi paket pada Ubuntu
-sudo apt-get update
 sudo apt-get install git php -y
 
 # Instalasi Composer
@@ -13,12 +12,6 @@ php -r "unlink('composer-setup.php');"
 # Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 
-# Buat script start-mikman
-cat >start-mikman <<EOL
-#!/bin/bash
-if pgrep "php" >/dev/null 2>&1 ; then
-  killall php
-fi
 cd mikmanv1
 php artisan serve
 EOL
@@ -26,18 +19,11 @@ EOL
 # Buat script update-mikmanv1
 cat >update-mikmanv1 <<EOL
 #!/bin/bash
-mkdir ~/mikmanv1
+
 cd ~/mikmanv1
 composer install
 php artisan optimize
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
-./run-mikman
-EOL
-
-# Beri izin eksekusi pada script
-curl -O https://devahmady.github.io/run-mikman.txt
 chmod +x run-mikman
-
-# Jalankan script start-mikman
-./start-mikman
+./run-mikman
