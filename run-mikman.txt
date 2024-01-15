@@ -44,4 +44,4 @@ curl -O https://devahmady.github.io/run-mikman.txt
 chmod +x run-mikman
 
 # Run start-mikman script
-./start-mikman
+./run-mikman
