@@ -3,7 +3,7 @@ Temukan yang Anda butuhkan lebih cepat … Beranda adalah halaman landing baru A
 pkg install git php composer -y
 
 # Clone repository mikhmonv3
-git clone https://devahmady.github.io/run-mikman.txt
+git clone https://github.com/devahmady/mikmanv1.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikmanv1
@@ -18,22 +18,20 @@ fi
 cd mikmanv1
 php -S 0.0.0.0:8000
 EOL
-
 cat >update-mikmanv1 <<EOL
 #bin/bash
 mkdir ~/backup-mikmanv1
 cp -r ~/mikmanv1/. ~/backup-mikmanv1/
 rm -rf ~/laravel-project
-git clone https://devahmady.github.io/mikmanv1.git
+git clone https://github.com/devahmady/mikmanv1.git
 cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
 cd ~/mikmanv1
 composer install
 php artisan migrate
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
-./start-mikman
+./run-mikman
 EOL
-
 
 # Create remove-mikmanv1 script
 cat >remove-mikmanv1 <<EOL
@@ -51,7 +49,7 @@ fi
 EOL
 
 # Give execute permissions
-php mikman optimaze
+chmod +x run-mikman
 
 # Run start-mikhmon script
-php artisan server
+./start-mikman
