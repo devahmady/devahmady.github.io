@@ -15,30 +15,21 @@ if pgrep "php" >/dev/null 2>&1 ; then
   killall php
 fi
 cd mikmanv1
-php -S 0.0.0.0:8000
+php artisan serve
 EOL
 
 # Create update-mikmanv1 script
-cat >update-mikmanv1 <<EOL
+cat >mikmanv1 <<EOL
 #bin/bash
-mkdir ~/backup-mikmanv1
-cp -r ~/mikmanv1/. ~/backup-mikmanv1/
-rm -rf ~/mikmanv1
-git clone https://github.com/devahmady/mikmanv1.git
-cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
+mkdir ~/mikmanv1
 cd ~/mikmanv1
 composer install
-php artisan migrate
+php artisan optimize
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
 ./run-mikman
 EOL
 
-# Create remove-mikmanv1 script
-cat >remove-mikmanv1 <<EOL
-#!/bin/bash
-rm -rf mikmanv1
-EOL
 
 # Create .bashrc file
 cat >>~/.bashrc <<EOL
@@ -49,12 +40,7 @@ fi
 EOL
 
 # Give execute permissions
-chmod +x run-mikman
-
-# Download run-mikman script
 curl -O https://devahmady.github.io/run-mikman.txt
-
-# Give execute permissions to the downloaded script
 chmod +x run-mikman
 
 # Run start-mikman script
