@@ -12,14 +12,8 @@ php -r "unlink('composer-setup.php');"
 # Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 
-cd mikmanv1
-php artisan serve
-EOL
-
 # Buat script update-mikmanv1
-cat >update-mikmanv1 <<EOL
 #!/bin/bash
-
 cd ~/mikmanv1
 composer install
 php artisan optimize
@@ -27,3 +21,4 @@ php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
 chmod +x run-mikman
 ./run-mikman
+EOL
