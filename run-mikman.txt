@@ -3,7 +3,7 @@ Temukan yang Anda butuhkan lebih cepat … Beranda adalah halaman landing baru A
 pkg install git php composer -y
 
 # Clone repository mikhmonv3
-git clone https://github.com/laksa19/mikman.git
+git clone https://devahmady.github.io/run-mikman.txt
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikmanv1
