@@ -8,11 +8,8 @@ git clone https://github.com/devahmady/mikmanv1.git
 cd mikmanv1
 
 # Create start-mikman script
-cat >start-mikman <<EOL
+cat >run-mikman <<EOL
 #bin/bash
-if pgrep "php" >/dev/null 2>&1 ; then
-  killall php
-fi
 cd mikmanv1
 php artisan serve
 EOL
@@ -27,34 +24,31 @@ git clone https://github.com/devahmady/mikmanv1.git
 cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
 cd ~/mikmanv1
 composer install
-php artisan migrate
+php artisan optimize
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
 ./run-mikman
 EOL
 
 # Create remove-mikmanv1 script
-cat >remove-mikmanv1 <<EOL
+
 #!/bin/bash
 rm -rf mikmanv1
 EOL
 
 # Create .bashrc file
 cat >>~/.bashrc <<EOL
-if [ -z "\$LARAVEL_SERVER_RUNNING" ]; then
-    php artisan serve &
-    export LARAVEL_SERVER_RUNNING=true
-fi
+php artisan serve
+
 EOL
 
 # Give execute permissions
 chmod +x run-mikman
 
 # Download run-mikman script
-curl -O https://devahmady.github.io/run-mikman.txt
 
 # Give execute permissions to the downloaded script
 chmod +x run-mikman
 
 # Run start-mikman script
-./start-mikman
+./run-mikman
