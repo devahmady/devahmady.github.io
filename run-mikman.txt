@@ -1,0 +1,42 @@
+Temukan yang Anda butuhkan lebih cepat … Beranda adalah halaman landing baru Anda dan menampilkan file dan folder yang paling relevan
+#bin/bash
+pkg install git php composer -y
+
+# Clone repository mikhmonv3
+git clone https://github.com/laksa19/mikman.git
+
+# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
+cd mikmanv1
+composer install
+
+# Create start-mikman script
+cat >start-mikman <<EOL
+#bin/bash
+if pgrep "php" >/dev/null 2>&1 ; then
+  killall php
+fi
+cd mikmanv1
+php -S 0.0.0.0:8000
+EOL
+
+
+# Create remove-mikmanv1 script
+cat >remove-mikmanv1 <<EOL
+#!/bin/bash
+rm -rf mikmanv1
+EOL
+
+
+# Create .bashrc file
+cat >>~/.bashrc <<EOL
+if [ -z "\$LARAVEL_SERVER_RUNNING" ]; then
+    php artisan serve &
+    export LARAVEL_SERVER_RUNNING=true
+fi
+EOL
+
+# Give execute permissions
+php mikman optimaze
+
+# Run start-mikhmon script
+php artisan server
