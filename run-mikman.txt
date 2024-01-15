@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Instalasi paket
-pkg install git php -y
+# Instalasi paket pada Ubuntu
+sudo apt-get update
+sudo apt-get install git php -y
 
 # Instalasi Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
