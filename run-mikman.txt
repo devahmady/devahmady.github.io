@@ -46,13 +46,17 @@ php artisan serve
 
 EOL
 
-# Give execute permissions
+#!/bin/bash
+
+# Menentukan direktori proyek
+PROJECT_DIR="/mikmanv1"
+
+# Pindah ke direktori proyek
+cd "$PROJECT_DIR" || exit
+
+# Menjalankan perintah lain yang diperlukan
 chmod +x run-mikman
 
-# Download run-mikman script
-
-# Give execute permissions to the downloaded script
-chmod +x run-mikman
-
-# Run start-mikman script
+# Menjalankan skrip
 ./run-mikman
+
