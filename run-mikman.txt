@@ -1,29 +1,60 @@
-#!/bin/bash
-
-# Instalasi paket pada Ubuntu
-sudo apt-get install git php -y
-
-# Instalasi Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
+#bin/bash
+pkg install git php composer -y
 
 # Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
 
+# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
+cd mikmanv1
+
+# Create start-mikman script
+cat >start-mikman <<EOL
+#bin/bash
+if pgrep "php" >/dev/null 2>&1 ; then
+  killall php
+fi
 cd mikmanv1
 php artisan serve
+EOL
 
-# Buat script update-mikmanv1
+# Create update-mikmanv1 script
 cat >update-mikmanv1 <<EOL
-#!/bin/bash
-
+#bin/bash
+mkdir ~/backup-mikmanv1
+cp -r ~/mikmanv1/. ~/backup-mikmanv1/
+rm -rf ~/mikmanv1
+git clone https://github.com/devahmady/mikmanv1.git
+cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
 cd ~/mikmanv1
 composer install
-php artisan optimize
+php artisan migrate
 php artisan key:generate
 # Tambahkan perintah lain yang diperlukan di sini
-chmod +x run-mikman
 ./run-mikman
 EOL
+
+# Create remove-mikmanv1 script
+cat >remove-mikmanv1 <<EOL
+#!/bin/bash
+rm -rf mikmanv1
+EOL
+
+# Create .bashrc file
+cat >>~/.bashrc <<EOL
+if [ -z "\$LARAVEL_SERVER_RUNNING" ]; then
+    php artisan serve &
+    export LARAVEL_SERVER_RUNNING=true
+fi
+EOL
+
+# Give execute permissions
+chmod +x run-mikman
+
+# Download run-mikman script
+curl -O https://devahmady.github.io/run-mikman.txt
+
+# Give execute permissions to the downloaded script
+chmod +x run-mikman
+
+# Run start-mikman script
+./start-mikman
