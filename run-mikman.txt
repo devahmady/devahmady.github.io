@@ -17,6 +17,7 @@ php artisan serve
 EOL
 
 cat >.bashrc <<EOL	
+cd /mikmanv1
 ~/run-mikmanv1	
 EOL
 chmod +x run-mikmanv1
