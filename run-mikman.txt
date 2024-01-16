@@ -17,10 +17,9 @@ if pgrep "php" >/dev/null 2>&1 ; then
   killall php
 fi
 cd mikmanv1
-composer dump-autoload
 cp .env.example .env
-php artisan optimize
 php artisan key:generate
+composer dump-autoload
 echo "Starting Laravel server..."
 php artisan serve --host=127.0.0.0:8000
 EOL
