@@ -1,61 +1,24 @@
-#bin/bash
-apt install git php composer -y
+#!/bin/bash
+apt install git php -y
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
-# Clone repository mikmanv1
 git clone https://github.com/devahmady/mikmanv1.git
-
-# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
-cd mikmanv1
-
-# Create start-mikman script
-cat >run-mikman <<EOL
+cat >run-mikmanv1 <<EOL
 #bin/bash
+if pgrep "php" >/dev/null 2>&1 ; then
+killall php
+fi
 cd mikmanv1
-php artisan serve
-EOL
-
-# Create update-mikmanv1 script
-# Buat script update-mikmanv1
-cat >update-mikmanv1 <<'EOL'
-#!/bin/bash
-
-cd ~/mikmanv1
-composer install
-php artisan optimize
-php artisan key:generate
-# Tambahkan perintah lain yang diperlukan di sini
-chmod +x run-mikman
-./run-mikman
+php artisan serve -S 0.0.0.0:8000
 EOL
 
 
-# Create remove-mikmanv1 script
-
-#!/bin/bash
-rm -rf mikmanv1
+cat >.bashrc <<EOL	
+~/run-mikmanv1	
 EOL
+chmod +x run-mikmanv1
 
-# Create .bashrc file
-cat >>~/.bashrc <<EOL
-php artisan serve
-
-EOL
-
-#!/bin/bash
-
-# Menentukan direktori proyek
-PROJECT_DIR="/mikmanv1"
-
-# Pindah ke direktori proyek
-cd "$PROJECT_DIR" || exit
-
-# Menjalankan perintah lain yang diperlukan
-chmod +x run-mikman
-
-# Menjalankan skrip
-./run-mikman
-
+./run-mikmanv1
