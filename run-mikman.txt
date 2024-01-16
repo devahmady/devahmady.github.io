@@ -15,7 +15,7 @@ if pgrep "php" >/dev/null 2>&1 ; then
   killall php
 fi
 cd mikmanv1
-php -S 0.0.0.0:8000
+php artisan sever --host=127.0.0.0:8000
 EOL
 
 # Create update-mikmanv1 script
@@ -49,13 +49,13 @@ fi
 EOL
 
 # Give execute permissions
-chmod +x run-mikman
+chmod +x start-mikman
 
 # Download run-mikman script
 curl -O https://devahmady.github.io/run-mikman.txt
 
 # Give execute permissions to the downloaded script
-chmod +x run-mikman
+chmod +x start-mikman
 
 # Run start-mikman script
 ./start-mikman
