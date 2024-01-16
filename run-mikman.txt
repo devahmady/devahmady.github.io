@@ -12,9 +12,9 @@ if pgrep "php" >/dev/null 2>&1 ; then
 killall php
 fi
 cd mikmanv1
-php artisan serve -S 0.0.0.0:8000
+composer install
+php artisan serve 
 EOL
-
 
 cat >.bashrc <<EOL	
 ~/run-mikmanv1	
