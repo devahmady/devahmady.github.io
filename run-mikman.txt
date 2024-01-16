@@ -20,7 +20,7 @@ cd mikmanv1
 cp .env.example .env
 php artisan key:generate
 composer dump-autoload
-echo "Starting Laravel server..."
+echo "Starting mikman server..."
 php artisan serve --host=127.0.0.0:8000
 EOL
 
