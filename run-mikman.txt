@@ -6,6 +6,7 @@ git clone https://github.com/devahmady/mikmanv1.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikmanv1
+composer install --optimize-autoloader --no-dev
 
 # Create start-mikman script
 cat >start-mikman <<EOL
