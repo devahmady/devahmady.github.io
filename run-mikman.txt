@@ -1,25 +1,61 @@
-#!/bin/bash
-apt install git php -y
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-
-git clone https://github.com/devahmady/mikmanv1.git
-cat >run-mikmanv1 <<EOL
 #bin/bash
-if pgrep "php" >/dev/null 2>&1 ; then
-killall php
-fi
+pkg install git php composer -y
+
+# Clone repository mikmanv1
+git clone https://github.com/devahmady/mikmanv1.git
+
+# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikmanv1
 composer install
-php artisan serve 
+
+# Create start-mikman script
+cat >start-mikman <<EOL
+#bin/bash
+if pgrep "php" >/dev/null 2>&1 ; then
+  killall php
+fi
+cd mikmanv1
+php -S 0.0.0.0:8000
 EOL
 
-cat >.bashrc <<EOL	
-cd /mikmanv1
-~/run-mikmanv1	
+# Create update-mikmanv1 script
+cat >update-mikmanv1 <<EOL
+#bin/bash
+mkdir ~/backup-mikmanv1
+cp -r ~/mikmanv1/. ~/backup-mikmanv1/
+rm -rf ~/mikmanv1
+git clone https://github.com/devahmady/mikmanv1.git
+cp -r ~/backup-mikmanv1/.env ~/mikmanv1/
+cd ~/mikmanv1
+composer install
+php artisan migrate
+php artisan key:generate
+# Tambahkan perintah lain yang diperlukan di sini
+./run-mikman
 EOL
-chmod +x run-mikmanv1
 
-./run-mikmanv1
+# Create remove-mikmanv1 script
+cat >remove-mikmanv1 <<EOL
+#!/bin/bash
+rm -rf mikmanv1
+EOL
+
+# Create .bashrc file
+cat >>~/.bashrc <<EOL
+if [ -z "\$LARAVEL_SERVER_RUNNING" ]; then
+    php artisan serve &
+    export LARAVEL_SERVER_RUNNING=true
+fi
+EOL
+
+# Give execute permissions
+chmod +x run-mikman
+
+# Download run-mikman script
+curl -O https://devahmady.github.io/run-mikman.txt
+
+# Give execute permissions to the downloaded script
+chmod +x run-mikman
+
+# Run start-mikman script
+./start-mikman
