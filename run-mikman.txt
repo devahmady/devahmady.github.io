@@ -11,10 +11,15 @@ composer install
 # Create start-mikman script
 cat >start-mikman <<EOL
 #!/bin/bash
+echo "Checking for PHP processes..."
 if pgrep "php" >/dev/null 2>&1 ; then
+  echo "Found PHP processes, stopping..."
   killall php
 fi
 cd mikmanv1
+php artisan optimize
+php artisan key:generate
+echo "Starting Laravel server..."
 php artisan serve --host=127.0.0.0:8000
 EOL
 
