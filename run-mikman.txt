@@ -5,8 +5,8 @@ pkg install git php composer -y
 git clone https://github.com/devahmady/mikmanv1.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
-# cd mikmanv1
-# composer install 
+cd mikmanv1
+composer install 
 
 
 # Create start-mikman script
