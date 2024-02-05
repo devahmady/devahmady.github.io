@@ -2,7 +2,7 @@
 pkg install git php composer -y
 
 # Clone repository mikmanv1
-git clone https://github.com/devahmady/mikrotikweb.git
+git clone https://github.com/devahmady/mikman.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikrotikweb
