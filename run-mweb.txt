@@ -1,0 +1,33 @@
+#!/bin/bash
+pkg install git php composer -y
+
+# Clone repository mikmanv1
+git clone https://github.com/devahmady/mikrotikweb.git
+
+# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
+cd mikrotikweb
+composer install --optimize-autoloader --no-dev
+
+
+# Create start-mikman script
+cat >run-mikrotikweb <<EOL
+#!/bin/bash
+echo "Checking for PHP processes..."
+if pgrep "php" >/dev/null 2>&1 ; then
+  echo "Found PHP processes, stopping..."
+  killall php
+fi
+cd mikrotikweb
+cp .env.example .env
+php artisan key:generate
+composer install --optimize-autoloader --no-dev
+php artisan optimize
+echo "Starting mikman server..."
+php artisan serve --host=0.0.0.0 --port=8000
+EOL
+
+# Give execute permissions
+chmod +x run-mikrotikweb
+
+# Run start-mikman script
+./run-mikrotikweb
