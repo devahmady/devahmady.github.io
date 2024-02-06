@@ -8,8 +8,8 @@ git clone https://github.com/devahmady/mikman.git
 cd mikman
 composer install --optimize-autoloader --no-dev
 
-# Create run-mikman script
-cat >run-mikman <<EOL
+# Create mikman script
+cat >mikman <<EOL
 #!/bin/bash
 echo "Checking for PHP processes..."
 if pgrep "php" >/dev/null 2>&1 ; then
@@ -26,7 +26,7 @@ php artisan serve --host=127.0.0.1 --port=8000
 EOL
 
 # permissions
-chmod +x run-mikman
+chmod +x mikman
 
 # Run server start-mikman 
-./run-mikman
+./mikman
