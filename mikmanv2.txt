@@ -9,7 +9,7 @@ cd mikmanv2
 composer install --optimize-autoloader --no-dev
 
 # Create mikmanv2 script
-cat >run-mikmanv2 <<EOL
+cat >run-mikman <<EOL
 #!/bin/bash
 echo "Checking for PHP processes..."
 if pgrep "php" >/dev/null 2>&1 ; then
