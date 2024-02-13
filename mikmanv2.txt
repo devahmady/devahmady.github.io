@@ -1,0 +1,32 @@
+#!/bin/bash
+pkg install git php composer -y
+
+# Clone repository mikmanv1
+git clone https://github.com/devahmady/mikmanv2.git
+
+# Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
+cd mikmanv2
+composer install --optimize-autoloader --no-dev
+
+# Create mikmanv2 script
+cat >run-mikmanv2 <<EOL
+#!/bin/bash
+echo "Checking for PHP processes..."
+if pgrep "php" >/dev/null 2>&1 ; then
+  echo "Found PHP processes, stopping..."
+  killall php
+fi
+cd mikmanv2
+cp .env.example .env
+php artisan key:generate
+composer install --optimize-autoloader --no-dev
+php artisan optimize
+echo "Starting mikman server..."
+php artisan serve --host=127.0.0.1 --port=8000
+EOL
+
+# permissions
+chmod +x run-mikman
+
+# Run server start-mikman 
+./run-mikman
