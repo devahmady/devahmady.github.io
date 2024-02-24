@@ -26,7 +26,7 @@ php artisan serve --host=127.0.0.1 --port=8000
 EOL
 
 # permissions
-chmod +x run-mikman
+chmod +x run-mikman-v2
 
 # Run server start-mikman 
-./run-mikman
+./run-mikman-v2
