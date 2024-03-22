@@ -6,7 +6,7 @@ git clone https://github.com/devahmady/mikman.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikman
-
+composer update
 # Create mikman script
 cat >run-mikman <<EOL
 #!/bin/bash
@@ -17,6 +17,7 @@ if pgrep "php" >/dev/null 2>&1 ; then
 fi
 cd mikman
 cp .env.example .env
+composer update
 php artisan key:generate
 php artisan optimize
 echo "Starting mikman server..."
