@@ -1,14 +1,15 @@
 #!/bin/bash
 pkg install git php composer -y
 
-# Clone repository mikmanv1
+# Clone repository mikmanv2.2
 git clone https://github.com/devahmady/mikman.git
 
 # Install Composer dependencies for Laravel (Optional, only if you plan to use Laravel)
 cd mikman
 composer update
+
 # Create mikman script
-cat >run-mikman <<EOL
+cat > run-mikman << 'EOL'
 #!/bin/bash
 echo "Checking for PHP processes..."
 if pgrep "php" >/dev/null 2>&1 ; then
