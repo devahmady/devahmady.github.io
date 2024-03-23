@@ -18,12 +18,16 @@ if pgrep "php" >/dev/null 2>&1 ; then
 fi
 cd mikman
 cp .env.example .env
-composer update
+# Check if Composer dependencies are installed
+if [ ! -d "vendor" ]; then
+  composer update
+fi
 php artisan key:generate
 php artisan optimize
 echo "Starting mikman server..."
 php artisan serve --host=127.0.0.1 --port=8000
 EOL
+
 
 # permissions
 chmod +x run-mikman
